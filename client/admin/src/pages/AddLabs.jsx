@@ -30,7 +30,7 @@ const AddLabs = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/admin/getUsers");
+                const response = await axios.get("https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/admin/getUsers");
                 // Handle both array and object response formats
                 const users = Array.isArray(response.data) ? response.data : response.data.users;
                 const formattedUsers = (users || []).map(user => ({
@@ -65,7 +65,7 @@ const AddLabs = () => {
                 userEmails: selectedUsers.map(user => user.email)  // Send emails instead of IDs
             };
 
-            const response = await axios.post("http://localhost:8080/api/admin/addLab", labData);
+            const response = await axios.post("https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/admin/addLab", labData);
 
             if (response.data.success) {
                 toast.success("Lab added successfully");

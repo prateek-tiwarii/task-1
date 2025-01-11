@@ -16,7 +16,7 @@ const Home = () => {
 
 
             try {
-                const response = await axios.post('http://localhost:8080/api/user/getLab', {
+                const response = await axios.post('https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/user/getLab', {
                     id: user._id,
                 });
 

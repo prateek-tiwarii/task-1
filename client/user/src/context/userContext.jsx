@@ -66,7 +66,7 @@ export const UserProvider = ({ children }) => {
                 setLoading(true);
                 try {
 
-                    const res = await axios.post('http://localhost:8080/api/auth/verify', { token });
+                    const res = await axios.post('https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/auth/verify', { token });
                     console.log(res);
                     if (res.data.success) {
                         setUser(res.data.user);
