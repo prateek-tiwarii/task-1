@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useNavigate } from 'react-router-dom';
-import { useUser } from '@/context/UserContext';
 import { Label } from '@/components/ui/label';
 import { Check, ChevronsUpDown, Bell } from "lucide-react";
 import {
@@ -19,6 +18,7 @@ import {
 } from "@/components/ui/popover";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import ChangePassword from './changePass';
+import { useUser } from '@/context/userContext';
 
 
 const Header = () => {
