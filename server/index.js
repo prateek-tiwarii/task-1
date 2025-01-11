@@ -14,7 +14,7 @@ dotenv.config();
 app.use(cors({
     origin: (origin, callback) => {
         const allowedOrigins = [
-            'https://task-1-4iaj.vercel.app',
+            'https://task-1-sa6j.vercel.app',
             'http://localhost:5173',
             'https://task-1-usernew.vercel.app'
         ];
