@@ -7,32 +7,39 @@ import AdminRoutes from './routes/adminRoute.js';
 import connectToDb from './utils/db.js';
 import AuthRouter from './routes/Auth.js';
 
-
-
 const app = express();
 dotenv.config();
-app.use(cors());
+
+// Updated CORS configuration
+app.use(cors({
+    origin: [
+        'https://task-1-4iaj.vercel.app',  
+        'http://localhost:3000',
+        'https://task-1-usernew.vercel.app'
+
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
 
 connectToDb();
 
-
-
 app.get('/', (req, res) => {
-  res.json({
-    message: "Hello Hello",
-    healthy: true
-  })
+    res.json({
+        message: "Hello Hello",
+        healthy: true
+    })
 })
 
 app.use('/api/user', UserRoutes);
 app.use('/api/admin', AdminRoutes);
 app.use("/api/auth", AuthRouter);
 
-
-
 // Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });

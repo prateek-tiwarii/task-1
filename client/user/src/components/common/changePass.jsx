@@ -51,7 +51,7 @@ const ChangePassword = ({ isOpen, onClose }) => {
         setLoading(true);
         try {
             // Send request to update password
-            const response = await axios.post('http://localhost:8080/api/user/updatePassword', {
+            const response = await axios.post('https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/user/updatePassword', {
                 id: user._id,
                 currentPassword: currentPassword,
                 newPassword: newPassword,

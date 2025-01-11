@@ -31,7 +31,7 @@ const Header = () => {
     const handleLogout = () => {
         console.log('logout');
         logout();
-        window.location.replace('/');
+        window.loca; tion.replace('/');
     };
 
     const handleChangePassword = () => {
