@@ -22,7 +22,7 @@ export const UserProvider = ({ children }) => {
         setLoading(true);
 
         try {
-            const url = 'http://localhost:8080/api/user/login'; // Your login endpoint
+            const url = 'https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/user/login'; // Your login endpoint
 
             // Make the login request
             const res = await axios.post(url, { email, password });

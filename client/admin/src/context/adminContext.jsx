@@ -26,7 +26,7 @@ export const UserProvider = ({ children }) => {
         setLoading(true);
         try {
             // API endpoint for admin login
-            const url = 'http://localhost:8080/api/admin/login';
+            const url = 'https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/admin/login';
 
             // Make the login request
             const res = await axios.post(url, { email, password });
