@@ -26,7 +26,7 @@ export const UserProvider = ({ children }) => {
         setLoading(true);
         try {
             // API endpoint for admin login
-            const url = 'https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/admin/login';
+            const url = 'https://task-1-e1d9.onrender.com/api/admin/login';
 
             // Make the login request
             const res = await axios.post(url, { email, password });
@@ -78,7 +78,7 @@ export const UserProvider = ({ children }) => {
                 setLoading(true);
                 try {
 
-                    const res = await axios.post('https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/auth/verify', { token });
+                    const res = await axios.post('https://task-1-e1d9.onrender.com/api/auth/verify', { token });
 
                     if (res.data.success) {
                         setUser(res.data.user);

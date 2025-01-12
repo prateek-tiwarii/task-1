@@ -23,7 +23,7 @@ const UserManagement = () => {
     useEffect(() => {
         const getAllUsers = async () => {
             try {
-                const res = await axios.get("https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/admin/getUsers");
+                const res = await axios.get("https://task-1-e1d9.onrender.com/api/admin/getUsers");
                 // Check if res.data is the array, if not, access the correct property
                 const users = Array.isArray(res.data) ? res.data : res.data.users; // Adjust based on your API response
                 setAllUsers(users || []);  // Fallback to empty array if undefined

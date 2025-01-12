@@ -19,7 +19,7 @@ const AllLabs = () => {
     useEffect(() => {
         const fetchLabs = async () => {
             try {
-                const res = await axios.get('https://task-1-cwnabbiy5-tomioka-senseis-projects.vercel.app/api/admin/getLabs');
+                const res = await axios.get('https://task-1-e1d9.onrender.com/api/admin/getLabs');
                 setAllLabs(res.data);
                 setIsLoading(false);
             } catch (error) {
