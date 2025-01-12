@@ -23,7 +23,7 @@ const AddUser = ({ setNewUser, newUser }) => {
     };
 
     const handleSubmit = async () => {
-        const res = await axios.post("http://localhost:8080/api/admin/addUser", {
+        const res = await axios.post("https://task-1-e1d9.onrender.com/api/admin/addUser", {
             name: newUser.name,
             email: newUser.email,
             password: newUser.password,
